@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #CB4738;
+    --secondary-color: #FDC70B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Buttons */
+.btn-secondary {
+    color: #000 !important;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background: linear-gradient(26.73deg, #F9A51A 13.7%, #FBB612 29.8%, #FFDD00 66.81%);
+}
+
+.btn-primary {
+    color: #fff !important;
+    padding: .5rem 1rem;
+    background: linear-gradient(49.67deg, #054B8B 0%, #128BFB 42.33%, #055FB3 64.64%);
+}
+
+main {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 4000px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Header*/
+.header {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: .8;
+    width: 100%;
+    padding: 2rem 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.header .logo img {
+    width: 100%;
+    height: 2.5rem;
+    object-fit: cover;
+}
+
+.header .header-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-user .header-user-item,
+.header-declare .header-declare-item {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+.header-user {
+    margin-bottom: 1.5rem;
+    display: flex;
+}
+
+.header-user-register {
+    display: flex;
+    align-items: center;
+}
+
+.header-user-register i {
+    color: var(--primary-color);
+    font-size: 1.5em;
+}
+
+.signup-and-login {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+}
+
+.signup-inner, 
+.login-inner {
+    cursor: pointer;
+    display: inline-block;
+    color: #fff;
+    font-size: 1rem;
+    margin-left: .5rem;
+}
+
+.header-declare .header-declare-item {
+    margin-right: 1.5rem;
+}
+
+.header-user-item:not(:last-child){
+    display: inline-block;
+    margin-right: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Slider */
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.slider-item {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-item .slider-item-image {
+    /* Setting the first image default for the slider */
+    background-image: url('../images/slider1.jpeg');
+    transition: all .3s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
