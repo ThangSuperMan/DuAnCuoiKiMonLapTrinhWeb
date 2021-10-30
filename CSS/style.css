@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -29,9 +33,13 @@ body {
 
 main {
     width: 100%;
+    position: fixed;
 }
 
 .container {
+    /* Tell will browser optimize the animation for this element */
+    will-change: transform;
+
     width: 100%;
     height: 4000px;
     background-size: cover;
@@ -42,9 +50,9 @@ main {
 .header {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.1);
-    opacity: .8;
+    opacity: .9;
     width: 100%;
-    padding: 2rem 7rem;
+    padding: 2rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,7 +61,7 @@ main {
 
 .header .logo img {
     width: 100%;
-    height: 2.5rem;
+    height: 4.5rem;
     object-fit: cover;
 }
 
@@ -62,13 +70,17 @@ main {
     flex-direction: column;
 }
 
+
 .header-user .header-user-item,
 .header-declare .header-declare-item {
+    display: inline-block;
     color: #fff;
     text-decoration: none;
     font-weight: 300;
-    font-size: .8rem;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 }
+
 
 .header-user {
     margin-bottom: 1.5rem;
@@ -82,7 +94,7 @@ main {
 
 .header-user-register i {
     color: var(--primary-color);
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .signup-and-login {
@@ -91,13 +103,31 @@ main {
     font-weight: 300;
 }
 
+.signup-and-login i {
+    position: relative;
+    display: inline-block;
+    font-size: 2.2rem;
+}
+
+.signup-and-login i:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: -1;
+    border-radius: 50%;
+}
+
 .signup-inner, 
 .login-inner {
     cursor: pointer;
     display: inline-block;
     color: #fff;
-    font-size: 1rem;
-    margin-left: .5rem;
+    font-size: 1.4rem;
+    margin-left: .8rem;
 }
 
 .header-declare .header-declare-item {
@@ -107,14 +137,13 @@ main {
 .header-user-item:not(:last-child){
     display: inline-block;
     margin-right: 1.5rem;
-    font-size: 1rem;
 }
 
 /* Slider */
 .slider {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     z-index: 1;
 }
 
@@ -130,3 +159,5 @@ main {
     width: 100%;
     height: 100%;
 }
+
+/* Top background */

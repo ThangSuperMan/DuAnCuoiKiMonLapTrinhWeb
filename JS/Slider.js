@@ -1,6 +1,4 @@
 const sliderImage = document.querySelector('.slider-item-image');
-console.log(sliderImage)
-
 
 // Variables
 let index = 0;
@@ -10,7 +8,6 @@ const images = ['../images/slider1.jpeg', '../images/slider2.jpeg', '../images/s
 function handleChangeImageSlider() {
 
     if (index == images.length) {
-        console.log('Max image');
         // Reset the first image 
         index = 0;
     }
