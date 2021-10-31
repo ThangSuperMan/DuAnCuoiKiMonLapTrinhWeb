@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'KoHo', sans-serif;
 }
 
 /* Buttons */
@@ -41,7 +41,7 @@ main {
     will-change: transform;
 
     width: 100%;
-    height: 4000px;
+    height: 9000px;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -155,9 +155,67 @@ main {
 .slider-item .slider-item-image {
     /* Setting the first image default for the slider */
     background-image: url('../images/slider1.jpeg');
+    background-repeat: no-repeat;
     transition: all .3s ease-in-out;
     width: 100%;
     height: 100%;
 }
 
 /* Top background */
+.top-background {
+    top: 80rem;
+    z-index: 100;
+    position: absolute;
+}
+
+.top-background-bubble {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    padding: 20rem;
+    justify-content: center;
+    transform: translateY(-21%);
+}
+
+.bubble-item:not(last-child) {
+    margin-right: 2.5rem;
+}
+
+.bubble-item {
+    position: relative;
+}
+
+.bubble-item {
+    width: 18rem;
+    height: 18rem;
+
+}
+
+.bubble-item .bubble-item-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.bubble-item .bubble-inner {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #013789;
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.bubble-inner {
+    width: 80%;
+    text-align: center;
+}
+
+.top-background-image img {
+    width: 100%;
+    height: 70rem;
+    object-fit: cover;
+}
+
+
