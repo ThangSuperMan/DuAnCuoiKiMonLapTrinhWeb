@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #CB4738;
+    --primary-color: #D34334;
     --secondary-color: #FDC70B;
 }
 
@@ -39,7 +39,7 @@ main {
 .container {
     /* Tell will browser optimize the animation for this element */
     will-change: transform;
-
+    position: absolute;
     width: 100%;
     height: 9000px;
     background-size: cover;
@@ -163,7 +163,7 @@ main {
 
 /* Top background */
 .top-background {
-    top: 80rem;
+    top: 75rem;
     z-index: 100;
     position: absolute;
 }
@@ -183,12 +183,12 @@ main {
 
 .bubble-item {
     position: relative;
+    width: 25%;
 }
 
 .bubble-item {
-    width: 18rem;
-    height: 18rem;
-
+    width: 17rem;
+    height: 17rem;
 }
 
 .bubble-item .bubble-item-img {

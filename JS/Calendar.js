@@ -46,7 +46,6 @@ function handlePickDayFly(event) {
                 daysOfMonth[i].classList.remove('pick-day');
             }
         }
-        
     }
 
     // Add class pick-day for day be chose
@@ -55,7 +54,6 @@ function handlePickDayFly(event) {
     // Function update the date time and show up for user
     let item = event.target;
     showDateChooseFly(item);
-
 }
 
 function handleDisplayCalendar() {

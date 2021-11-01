@@ -10,7 +10,7 @@ body {
 
 .placesto-vietnam {
     position: relative;
-    top: 110rem;
+    top: 100rem;
     left: 50%;
     transform: translate(-50%, -50%);
     transform: translateX(-50%);

@@ -4,7 +4,6 @@ const word = textDestination.innerText.split('');
 
 // Reset value of textDestination
 textDestination.children[0].innerHTML = '';
-console.log(textDestination.children[0])
 
 word.forEach((letter, index) => {
     textDestination.children[0].innerHTML += `<span style="--index: ${index};">${letter}</span>`
