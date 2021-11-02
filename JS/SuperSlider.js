@@ -43,7 +43,6 @@ function handleCheckIndexSlide() {
 
         //Reset the index slide to the last slide
         indexSlide = slideItems.length - 2;
-        console.log(slideItems[indexSlide]);
 
         slideList.style.transform = `translateX(${-widthSlide * indexSlide}px)`;
         slideList.style.transition = 'none';
@@ -86,7 +85,7 @@ startSlide();
 
 // Event listeners
 nextButton.addEventListener('click', moveToNextSlide);
-prevButton.addEventListener('click', moveToPreviousSlide)
+prevButton.addEventListener('click', moveToPreviousSlide);
 
 sliderContainer.addEventListener('mouseenter', () => {
     // Stop move slide
