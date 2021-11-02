@@ -66,7 +66,6 @@ function moveToNextSlide() {
 
     // Handle when user click next slide so fast
     if (indexSlide >= (slideItems.length - 1)) {
-        console.log('Index too big');
         return;
     }
 
