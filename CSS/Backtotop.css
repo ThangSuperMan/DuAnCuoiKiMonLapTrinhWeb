@@ -5,7 +5,7 @@
     height: 5.5rem;
     background-color: rgb(236, 157, 11);
     bottom: 80rem;
-    right: 4rem;
+    right: 1.5rem;
     display: grid;
     place-items: center;
     opacity: 0;
@@ -14,7 +14,7 @@
 }
 
 .backToTop.active {
-    bottom: 4rem;
+    bottom: 3rem;
     opacity: 0.9;
     visibility: visible;
 }

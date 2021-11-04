@@ -41,9 +41,10 @@ main {
     will-change: transform;
     position: absolute;
     width: 100%;
-    height: 9000px;
+    height: 5300px;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 /* Header*/

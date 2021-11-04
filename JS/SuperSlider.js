@@ -29,13 +29,15 @@ const getSlideItems = () => document.querySelectorAll('.slide');
 function handleCheckIndexSlide() {
     slideItems = getSlideItems();
 
+    console.log(`Index: ${indexSlide}`)
+
     // Check first slide clone
     if (slideItems[indexSlide].id === firstClone.id) {
         // Reset the index slide to the first slide
         indexSlide = 1;
 
-        slideList.style.transform = `translateX(${-widthSlide * indexSlide}px)`;
         slideList.style.transition = 'none';
+        slideList.style.transform = `translateX(${-widthSlide * indexSlide}px)`;
     }
 
     // Check last slide clone
@@ -44,17 +46,16 @@ function handleCheckIndexSlide() {
         //Reset the index slide to the last slide
         indexSlide = slideItems.length - 2;
 
-        slideList.style.transform = `translateX(${-widthSlide * indexSlide}px)`;
         slideList.style.transition = 'none';
+        slideList.style.transform = `translateX(${-widthSlide * indexSlide}px)`;
     }
 }
 
 function moveToPreviousSlide() {
-    console.log(`Index: ${index}`);
     // Handle when user click previous slide so fast
     if (indexSlide <= 0) {
         return;
-    }
+    } 
 
     indexSlide--;
     slideList.style.transform = `translateX(${-widthSlide * indexSlide}px)`;
@@ -63,7 +64,7 @@ function moveToPreviousSlide() {
 
 function moveToNextSlide() {
 
-    // Handle when user click next slide so fast
+    //Handle when user click next slide so fast
     if (indexSlide >= (slideItems.length - 1)) {
         return;
     }
@@ -75,13 +76,9 @@ function moveToNextSlide() {
 
 function startSlide() {
     slideFunctionInterval = setInterval(() => {
-        indexSlide++;
-        slideList.style.transform = `translateX(${-widthSlide * indexSlide}px)`;
-        slideList.style.transition = 'all 0.7s ease-in-out'
+        moveToNextSlide();
     }, intervalTime)
 }
-
-startSlide();
 
 // Event listeners
 nextButton.addEventListener('click', moveToNextSlide);
@@ -99,3 +96,5 @@ sliderContainer.addEventListener('mouseleave', () => {
 
 slideList.addEventListener('transitionend', handleCheckIndexSlide);
 
+// Call functions
+startSlide();
